@@ -1,0 +1,324 @@
+body{
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+.col-4 {
+    width: 33.33%;
+}
+
+*{
+    box-sizing: border-box;
+}
+/* ___________________________________________________________________ */
+/* ########################### Navigation ############################ */
+/* ___________________________________________________________________ */
+ul.top-nav{
+    background-color: #eee;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+ul.top-nav li{
+    float: left;
+    list-style: None;
+  
+}
+
+ul.top-nav li.right-nav{
+    
+    float : right;
+}   
+
+ul.top-nav li a{
+    display: block;
+    text-decoration: none;
+    min-height: 16px;
+    text-align: center;
+    padding: 14px;
+    text-transform: uppercase;
+
+}
+
+ul.top-nav li a:hover{
+    background-color : #0080ff;
+    color : #fff;
+}
+
+ul.top-nav li.nav-icon{
+    display: none;
+}
+
+
+
+/* ___________________________________________________________________ */
+/* ########################### container 1 ########################### */
+/* ___________________________________________________________________ */
+
+
+
+.row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0;
+}
+
+.row::after{
+    display: table;
+    clear: both;
+}
+
+div.container{
+    width: 100%;
+    margin: auto;
+    
+}
+.custom-container {
+    padding: 50px;
+}
+
+div.container div.row div.col-6{
+    width: 50%;
+    
+}
+.col-7{
+    width: 57.33%;
+}
+.col-5{
+    width: 41.66%;
+}
+.col-3{
+    width: 24.99%;
+}
+
+
+
+/* ___________________________________________________________________ */
+/* ########################### container 2 ########################### */
+/* ___________________________________________________________________ */
+
+header.heading {
+    text-align: center;
+}
+
+header.heading h1{
+    padding-bottom: 0;
+    margin-bottom: 5px;
+}
+
+.box{
+ 
+    margin: 20px;
+    border-radius: 8px;
+    text-align: center;
+    background:#fff;
+    padding: 10px 15px 35px 15px;
+    box-shadow: 0px 3px 8px 3px rgba(0,0,0,0.15);
+}
+
+.button{
+    width: 100%;
+    text-align: center;
+}
+.button button{
+    background-color: #0080ff;
+    color: white;
+    width: 200px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    cursor: pointer;;
+}
+
+/* ___________________________________________________________________ */
+/* ########################### container 3 ########################### */
+/* ___________________________________________________________________ */
+
+
+.row.second{
+    padding: 40px;
+}
+
+.col-7 p{
+    width: 80%;
+    margin: auto;
+    padding: 0px 20px 0 20px;
+    text-align: justify;
+}
+
+.imgslope{
+    display: block;
+    margin: auto;
+}
+.col-5 .imgslope img{
+    display: block;
+    margin: auto;
+    box-shadow: -2px -2px 5px 3px rgba(0,0,0,0.15),2px 2px 3px 0px rgba(0,0,0,1);
+}
+/* ___________________________________________________________________ */
+/* ############################# customs ############################# */
+/* ___________________________________________________________________ */
+
+
+
+div.custom-container{
+    background: linear-gradient(rgb(0 128 255), rgb(121, 121, 255));
+}
+div.container .row .col-6 form h3{
+    line-height: 10px;
+    display: block;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+div.container .row .left-col div h1{
+    font-size: 40px;
+    margin: 0;
+    color: white;
+    line-height: 60px;
+}
+div.container .row .col-6 form input[type="text"]{
+    padding: 4px;
+    min-width: 200px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+div.container div.row .left-col > *{
+    margin-left: 30%;
+}
+
+div.container div.row div.col-6 div.iframe iframe{
+   align-items: center;
+   margin-left: 15%;
+   border-radius: 15px;
+}
+
+.col-4 .box label h3{
+    margin-top: 5px;
+}
+
+/* ___________________________________________________________________ */
+/* ############################## Footer ############################# */
+/* ___________________________________________________________________ */
+
+.foots{
+    background-color: #666;
+    padding-left: 10%;
+}
+
+.foots .col-3 h1{
+    font-size: 30px;
+
+}
+
+.foots .col-3 > *{
+    color: white;
+    text-align: left;
+}
+.foots .col-3 ul {
+    text-align: left;
+    padding-left: 0;
+}
+.foots .col-3 ul li{
+    list-style: none;
+}
+
+
+
+
+
+/* ___________________________________________________________________ */
+/* ############################## Mobile ############################# */
+/* ___________________________________________________________________ */
+
+
+
+@media screen and (max-width:680px) {
+    ul.top-nav li:not(:nth-child(1)){
+        display: none;
+    }
+
+    ul.top-nav li.nav-icon{
+        top: 0;
+        right: 0;
+        position: absolute;
+        float: right;
+        display: block;
+        
+    }
+
+    ul.top-nav.responsive {
+        position: relative;
+
+    }
+
+    ul.top-nav.responsive li{
+        float: none;
+        display: inline;
+    }
+
+    ul.top-nav.responsive,ul.top-nav.responsive li:not(:nth-child(1)){
+        animation-name: dropdown_animation;
+        animation-duration: 0.5s;
+        transition: 1s;
+    }
+
+    ul.top-nav.responsive li a{
+        display: block;
+        text-align : left;
+    }
+
+    /* ############### container 1 ################# */
+    div.container div.row div.col-6,.col-4{
+        width : 100%;
+
+    }
+    div.container div.row div.left-col > *{
+        text-align: center;
+    }
+    div.container div.row .left-col > *{
+        margin-left: 0;
+       
+    }
+    div.container div.row div.col-6 div.iframe{
+        padding: 20px 20px 0px 20px;
+    }
+    div.container div.row div.col-6 div.iframe iframe{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .row.second{
+        padding: 15px;
+    }
+    .col-7 p{
+        margin: auto;
+        width: 180%;
+        padding: 10px;
+    }
+    .imgslope{
+        padding: 10px;
+    }
+    .imgslope img{
+        width: 100%;
+    }
+
+    .col-5{
+        width: 100%;
+    }
+
+    .foots .col-3{
+        width: 50%;
+    }
+    
+}
+
+
